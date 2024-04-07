@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlyMe</title>
+    <link rel="stylesheet" href="{% static 'acceuil.css' %}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600&display=swap')
+    </style>
+</head>
+
+
+<body class="body">
+    <a href="./Acceuil.html"><img src="{% static 'Logo.svg' %}" alt="Logo" class="logo"></a>
+    <div class="box">
+        <div class="text">
+            <p>Bonjour</p> 
+            <p>Bienvenu sur FlyMe ,Permettez moi de vous guider pour choisir votre destination</p>
+            <button><a href="{% url 'goForm' %}">Commencer</a></button>
+        </div>
+        <div class="image">
+            <img src="{% static 'wallpaper.jpg' %}" alt="un avion dans le ciel">
+        </div>
+    </div>
+</body>
+</html>

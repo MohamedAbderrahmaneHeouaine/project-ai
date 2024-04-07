@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlyMe</title>
+    <link rel="stylesheet" href="{% static 'formulaire.css' %}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+    </style>
+</head>
+
+
+<body>
+    <a href="./Acceuil.html"><img src="{% static 'Logo.svg' %}" alt="Logo" class="logo"></a>
+    <form  method="post" action="/submit/">
+        {% csrf_token %}
+   <div class="form">
+        <div class="item">
+            <p>Quel est votre Budget?</p>
+            <select  name="budget">
+            <option value="Moyen">Moyon</option>
+            <option value="Elevé">Elevé</option>
+            </select>
+
+        </div>
+
+        <div class="item">
+            <p>Quelle est votre préférence ?</p>
+            <select name="preference">
+            <option value="Culture">Culture</option>
+            <option value="Aventure">Aventure</option>
+            <option value="Luxe">Luxe</option>
+            <option value="Relaxation">Relaxation</option>
+            <option value="Histoire">Histoire</option>
+            <option value="Gastronomie">Gastronomie</option>
+            <option value="Relogion">Relogion</option>
+            <option value="Archéologie">Archéologie</option>
+            <option value="Affaires">Affaires</option>
+            <option value="Traditions">Traditions</option>
+            <option value="Architecture">Architecture</option>
+            <option value="Modernité">Modernité</option>
+            <option value="Mangas">Mangas</option>
+            <option value="K-pop">K-pop</option>
+            
+            
+            
+            </select>
+
+        </div>
+
+        <div class="item">
+            <p>Quel est l'interet derriere votre voyage?</p>
+            <select name="interet">
+            <option value="Tourisme">Tourisme</option>
+            <option value="Affaires">Affaires</option>
+            <option value="Alpinisme">Alpinisme</option>
+            <option value="Festival">Festival</option>
+            <option value="Découverte">Découverte</option>
+            
+            
+            </select>
+
+        </div>
+
+        <div class="item">
+            <p>Pour quelle saison planifiez-vous votre voyage?
+            <select name="saison">
+            <option value="Eté">Eté</option>
+            <option value="Hiver">Hiver</option>
+            <option value="Printemps">Printemps</option>
+            <option value="Automne">Automne</option>
+            
+            </select>
+
+        </div>
+
+        <div class="item">
+            <p>Quel climat vous correspond?</p>
+            <select name="climat">
+            <option value="Océanique">Océanique</option>
+            <option value="Meditérranén">Meditérranén</option>
+            <option value="Modéré">Modéré</option>
+            <option value="Désertique">Désertique</option>
+            <option value="Subtropical">Subtropical</option>
+            <option value="Tropical">Tropical</option>
+            
+            </select>
+
+        </div>
+
+        <div class="item">
+            <p>Quel continent préférez-vous ?</p>
+            <select name="continent">
+            <option value="Afrique">Afrique</option>
+            <option value="Asie">Asie</option>
+            <option value="Europe">Europe</option>
+            <option value="Amérique">Amérique</option>
+            
+            </select>
+
+        </div>
+
+        <div class="item">
+            <p>Quelle sera votre compagnie ?</p>
+            <select name="compagnie">
+            <option value="Seul">Seul</option>
+            <option value="Groupe">Groupe</option>
+            <option value="Famille">Famille</option>
+            </select>
+
+        </div>
+
+        <button id="flyme-btn" type="submit">FlyMe</button>
+        
+    </div>
+     </form>
+</body>
+</html>

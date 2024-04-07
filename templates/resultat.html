@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlyMe</title>
+    <link rel="stylesheet" href="{% static 'resultat.css' %}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600&display=swap')
+    </style>
+</head>
+<body>
+    <a href="http://127.0.0.1:8000/"><img src="{% static 'Logo.svg' %}" alt="Logo" class="logo"></a>
+    <div class="box">
+        <p class="fst-p">FlyMe vous suggère la destination suivante:</p>
+        <div class="box-result">
+        <img src="{% static 'Flèche.svg' %}" alt="flèche" class="fleche">
+        <p class="Resultat">Destination : {{ value }}</p>
+        </div>
+    </div>
+</body>
+</html>
