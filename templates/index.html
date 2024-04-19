@@ -1,0 +1,22 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hello {{ feature.name }} in our html page</h1>
+    <h3>input your text here</h3>
+    <form method="post" action="/counter/">
+        {% csrf_token %}
+        <textarea name="text" rows="25" cols="100"></textarea>
+        <br>
+        <input type="submit"/>
+    </form>
+</body>
+</html>

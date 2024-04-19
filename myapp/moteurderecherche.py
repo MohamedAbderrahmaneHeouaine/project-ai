@@ -1,6 +1,4 @@
-from moteurderecherche import *
-from facts import *
-
+from .facts import *
 
 def generateLogicEx(data):
     expression_parts = []
@@ -11,15 +9,7 @@ def generateLogicEx(data):
     return expression
 
 
-input_data = {
-    'budget': 'Moyen',
-    'preference': 'Plage',
-    'interet': 'Tourisme',
-    'compagnie': 'Famille',
-    'climat': 'Tropical',
-    'continent': 'Amérique',
-    'saison': 'Toutes',
-}
+
 
 mapper = {
     'interet': lambda val: expr(f'Interet({val})'),
@@ -35,8 +25,12 @@ mapper = {
 # kb_instance = KnowledBase(input_data).response()
 
 # Print the result
-result2 = fol_fc_ask(dest_kb, expr('Budget(Moyen) & Preference(Plage) & Interet(Tourisme) & Compagnie(Famille) & Climat(Tropical) & Continent(Amérique) & Saison(Toutes) ==>Destination(x)'))
-result = str(generateLogicEx(input_data))
-print(result)
-print("Possible destinations:", list(fol_fc_ask(dest_kb, expr(result))))
-print(list(result2))
+def returnDistination(input_data):
+    logicEx = generateLogicEx(input_data)
+    result = str(logicEx)
+    return list(fol_fc_ask(dest_kb, expr(result)))
+# result2 = fol_fc_ask(dest_kb, expr('Budget(Moyen) & Preference(Plage) & Interet(Tourisme) & Compagnie(Famille) & Climat(Tropical) & Continent(Amérique) & Saison(Toutes) ==>Destination(x)'))
+# result = str(generateLogicEx(input_data))
+# print(result)
+# print("Possible destinations:", list(fol_fc_ask(dest_kb, expr(result))))
+# print(list(result2))

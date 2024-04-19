@@ -1,0 +1,50 @@
+body {
+    background-color: #1E1E1E;
+    max-width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins';
+
+}
+.containerDist{
+    background: url('resultatsImage.svg') no-repeat center center;
+    width: 90%;
+    height: 90vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.log-con{
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.dist-con{
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo{
+    margin-left: 15px;
+}
+.title{
+    font-size: 27px;
+    line-height: 40px;
+    width: 60%;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.distination{
+    font-weight: bold;
+}
+.value-distination{
+    font-size: medium;
+
+}
